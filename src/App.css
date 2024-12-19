@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+:root {
+  --light-bg:rgba(255, 255, 255, 1);
+  --dark-bg:rgba(24, 26, 42, 1);
+  --gray-bg: rgba(255, 255, 255, 1);
+  --gray-bg2:rgba(232, 232, 234, 1);
+  /* --blue-gb: rgba(75, 107, 251, 1); */
+  --blue-text:rgba(75, 107, 251, 1);
+  --gray-text: rgba(151, 152, 159, 1);
+  --gray-text2:rgba(105, 106, 117, 1); 
+
+  --footer-bg: rgba(246, 246, 247, 1);
+  --search-bg:rgba(244, 244, 245, 1);
+  --gray-border: rgba(220, 221, 223, 1);
+  --subscribeBtn-bg:  rgba(75, 107, 251, 1);
+  --input-border: rgba(59, 60, 74, 1);
+
+  --dark-footer-bg:rgba(36, 37, 53, 1);
+  --darker-footer-bg:  rgba(20, 22, 36, 1);
+  --dark-footer-text: rgba(186, 186, 191, 1);
+  --dark-footer-heading: rgba(255, 255, 255, 1);
+  --dark-advert-bg:rgba(36, 37, 53, 1);
+
+}
+body{
+  width:100%;
+  min-height: 100vh;
+  height:100%; 
+  font-family: "Work Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+body.darkMode{
+  background-color:var( --dark-bg);
+  color:var(--dark-footer-text)
+}
+
+/* body.darkMode div, 
+body.darkMode p {
+  background-color:var( --dark-bg);
+} */
+
+body.darkMode p{
+  background:transparent;
+}
+h1{
+  font-weight:600;
+  font-size:36px;
+  line-height:40px;
+}
+
+body.darkMode h1,
+body.darkMode h2,
+body.darkMode h3,
+body.darkMode h3,
+body.darkMode a,
+body.darkMode h4{
+  color:var(--dark-footer-heading);
+}
+h2{
+  font-size:24px;
+}
+
+
+h3{
+  font-size:18px;
+}
+
+a {
+  font-weight: 400;
+  color:rgba(59, 60, 74, 1);
+  text-decoration: inherit;
+}
+ 
+
+img{
+  width:100%;
+}
+
+button {
+  padding:12px 20px;
+  width:fit-content;
+  border-radius: 5px;
+  border: 1px solid var(--gray-text2); 
+  color:var(--gray-text2);
+  background:var(--light-bg);
+  font-size: 1rem;
+  font-weight: 500; 
+  cursor: pointer;
+  transition: border-color 0.25s;
+  outline:none;
+}
+
+body.darkMode button{
+  border-color:var(--gray-text2);
+  background-color:var(--dark-bg)
+}
+
+button:hover {
+  border-color: #646cff;
+}
+ 
+
+.userImage{
+  width:40px;
+  border-radius:50%;
+}
+
+.bigP{
+  font-size:18px;
+}
+.smallP{
+  font-size:14px;
+}
+ 
+.emailIcon{
+  width:18px;
+}

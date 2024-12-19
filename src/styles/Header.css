@@ -1,0 +1,107 @@
+
+.header{
+    height:100px; 
+    width:100%;
+    max-width:1216px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1rem; 
+    gap:1rem;
+    margin:auto;
+}
+
+
+.pageTopNav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+}
+
+.headerRight{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+}
+
+.serchInputContainer{
+    display:flex;
+    background:var(--search-bg);
+    padding:8px 8px 8px 16px;
+    gap:12px;
+    border-radius:5px;
+    max-width:310px;
+}
+.serchInput{
+    background: transparent;
+    padding:none;
+    border:none;
+    outline:none;
+   
+}
+
+.searchIcon{
+    width:16px; 
+}
+
+
+.modeBtn{
+    border:none;
+    background:var(--search-bg);
+    height:28px;
+    width:48px;
+    border-radius:100px;  
+    display:flex;
+    align-items:center;
+    padding:4px;
+    outline:none;
+    position:relative;
+    transition: background-color 0.25s;
+}
+
+.modeBtn.active{
+    background-color:rgba(75, 107, 251, 1);
+}
+
+
+.ballContainer {
+    height:24px;
+    width:24px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+    border:1px solid #fff;
+    overflow:hidden; 
+    border-radius:50%;
+    background:#fff; 
+    position:absolute;
+    top:50%;
+    left:0; 
+    transform:translateY(-50%);
+}
+.modeBtn.active .ballContainer{
+    left:50%;
+
+}
+
+.toggleBall{
+    width:100%;
+    object-fit:fill;
+}
+
+
+
+@media(max-width:520px) {
+    
+.header{
+    height:100px; 
+    width:100%;
+    max-width:1216px;
+   
+    flex-direction:column;
+    padding:1rem; 
+    gap:1rem;
+    margin:auto;
+}
+
+}

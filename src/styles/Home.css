@@ -1,0 +1,117 @@
+
+
+.content{
+    width:100%;
+    max-width:1216px;
+    margin: 1rem auto;
+    display:flex;
+    flex-direction:column;
+    gap:80px;
+}
+
+/* Hero  */
+
+
+.hero{ 
+    overflow-x:hidden;
+    position:relative;
+    z-index: 10;
+}
+.heroCardText{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.heroCardCategory{
+    color:rgba(255, 255, 255, 1);
+    background: rgba(75, 107, 251, 1);
+    padding:5px 12px;
+    border-radius:5px;
+    width:fit-content;
+}
+.heroImgCont{
+    margin-bottom:3rem;
+    border-radius:1.1rem;  
+    overflow-x:hidden;
+}
+.heroCard{
+    position:absolute;
+    z-index:20;
+    bottom:0;
+    left:4rem;
+    background:var(--light-bg);
+    border-radius:0.8rem;
+    width:600px;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    border:1px solid rgba(232, 232, 234, 1);
+    box-shadow: 0px 12px 12px -6px rgba(24, 26, 42, 0.12);
+
+}
+body.darkMode .heroCard{
+    border: 1px solid   rgba(36, 37, 53, 1);
+    background: rgba(24, 26, 42, 1); 
+}
+
+.userImgWrapper{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+.postUserInfo{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:1.5rem; 
+    color: rgba(151, 152, 159, 1); 
+}
+
+
+.postUserInfo p{
+    font-size:16px; 
+    font-weight:500;
+}
+
+
+/* main */
+
+
+
+@media(max-width:768px) {
+
+    .content{
+        width:100%; 
+        margin: 1rem auto; 
+        gap:40px; 
+    }
+    .heroCard{
+        position:absolute;
+        top:30%;
+        left:50%;
+        transform: translate(-50%, -50%); 
+        z-index:20; 
+        background:var(--light-bg);
+        border-radius:0.8rem; 
+        padding:30px; 
+       
+    }
+}
+
+@media(max-width: 520px){
+    .content{ 
+        gap:16px; 
+    }
+    .heroCard{
+        position:static;
+        top:0;
+        left:0;
+        transform: translate(-0, -0); 
+        z-index:20; 
+        background:var(--light-bg);
+        border-radius:0.8rem; 
+        padding:12px; 
+       
+    }
+}

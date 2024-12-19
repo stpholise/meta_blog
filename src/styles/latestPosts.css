@@ -1,0 +1,73 @@
+
+.latestpostContainer{
+    margin:1rem auto;
+    width:100%;  
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1.7rem; 
+}
+
+.postContainer{
+     border-radius:0.75rem;
+     border: 1px solid var(--gray-bg2);
+     background:var(--gray-bg);
+     display:flex;
+     flex-direction:column;
+     gap:1rem;
+     padding:1rem;
+}
+
+body.darkMode .postContainer{
+    background-color:var(--dark-bg);
+}
+.postBottom{
+    display:flex;
+    flex-direction:column;
+    gap:1rem; 
+}
+
+.postText{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    justify-content:space-between;
+}
+
+.postCategory{
+    background-color:rgba(75, 107, 251, 0.05);
+    color:   rgba(75, 107, 251, 1);
+    width: fit-content;
+    padding:4px 10px;
+    border-radius:5px; 
+}
+
+.allPostBtn{
+    margin:auto;
+    display:block; 
+}
+
+/* ============================ */
+/* ============================ */
+/* ============================ */
+/* ============ tablet scree=====n=========== */
+@media(max-width:768px) {
+    .latestpostContainer{
+        margin:1rem auto;
+        width:100%;  
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap:1.7rem;
+         
+    
+    }
+    
+}
+@media(max-width: 520px) {
+    .latestpostContainer{
+        margin:1rem auto;
+        width:100%;  
+        display:grid;
+        grid-template-columns:  1fr;
+        gap:1.7rem; 
+    }
+}
