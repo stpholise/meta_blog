@@ -20,6 +20,12 @@
 body.darkMode .postContainer{
     background-color:var(--dark-bg);
 }
+
+
+.postTop{
+    border-radius:0.7rem;
+    overflow:hidden;
+}
 .postBottom{
     display:flex;
     flex-direction:column;
@@ -46,6 +52,7 @@ body.darkMode .postContainer{
     display:block; 
 }
 
+
 /* ============================ */
 /* ============================ */
 /* ============================ */
@@ -68,6 +75,7 @@ body.darkMode .postContainer{
         width:100%;  
         display:grid;
         grid-template-columns:  1fr;
-        gap:1.7rem; 
+        gap:1rem; 
+        padding:0.5rem;
     }
 }

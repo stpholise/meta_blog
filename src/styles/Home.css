@@ -102,16 +102,42 @@ body.darkMode .heroCard{
 @media(max-width: 520px){
     .content{ 
         gap:16px; 
+        padding:0.5rem;
     }
-    .heroCard{
+    .heroImage{
+        object-fit: cover;
+        height:100%;
+    }
+    .heroImgCont{
+        margin-bottom:3rem;
+        border-radius:1.1rem;  
+        overflow-x:hidden;
+        height:fit-content;
+        display:none;
+    }
+    .heroCard{ 
         position:static;
         top:0;
         left:0;
-        transform: translate(-0, -0); 
-        z-index:20; 
-        background:var(--light-bg);
-        border-radius:0.8rem; 
-        padding:12px; 
+        transform: translate(-0, -0);   
+        padding:10px; 
+        width:100%;
+        background:transparent;
+        color:#fff;
+        background:url('../assets/hero_Image.jpg');
+        background-size:cover;
+        background-position:center;
        
     }
+    .postUserInfo{ 
+        gap:0.5rem;  
+    }
+    
+    .userImgWrapper{
+        gap:0.5rem;
+    }
+    .postUserInfo p{
+        font-size:14px;  
+    }
+    
 }

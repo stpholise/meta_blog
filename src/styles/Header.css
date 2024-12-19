@@ -94,10 +94,9 @@
 @media(max-width:520px) {
     
 .header{
-    height:100px; 
+    height:fit-content; 
     width:100%;
-    max-width:1216px;
-   
+    max-width:1216px; 
     flex-direction:column;
     padding:1rem; 
     gap:1rem;
