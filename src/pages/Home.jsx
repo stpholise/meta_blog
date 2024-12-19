@@ -4,7 +4,7 @@ import LatestPosts from '../components/LatestPosts'
 import Footer from '../components/Footer'
 import Hero_Image from '../assets/hero_Image.jpg'
 import '../styles/Home.css'
-import User_3_image from '../assets/profile_image/image_3.jpg'
+import User_4_image from '../assets/profile_image/image_.jpg'
 
 const Home = () => {
   return (
@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
                 <div className="postUserInfo">
                   <div className="userImgWrapper">
-                      <img src={User_3_image} className='userImage' alt="user profile " />
+                      <img src={User_4_image} className='userImage' alt="user profile " />
                       <p className="postUserName">Jason Francisco</p>
                   </div>
                   <p className="postDate">August 20, 2022 </p>
