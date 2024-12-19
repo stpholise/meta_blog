@@ -4,7 +4,7 @@ import LatestPosts from '../components/LatestPosts'
 import Footer from '../components/Footer'
 import Hero_Image from '../assets/hero_Image.jpg'
 import '../styles/Home.css'
-import User_4_image from '../assets/profile_image/image_.jpg'
+import User_4_image from '../assets/profile_image/Image_4.jpg'
 
 const Home = () => {
   return (
