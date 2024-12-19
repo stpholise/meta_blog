@@ -14,7 +14,7 @@ body.darkMode footer,
 body.darkMode .footerBottom {
     background:var(--darker-footer-bg);
     color:var( --dark-footer-text);
-    border-top:var(--dark-footer-bg)
+    border-top:var(--dark-footer-bg);
 }
 
 body.darkMode footer a{
@@ -26,6 +26,8 @@ body.darkMode footer a{
     max-width:1216px;
     display:flex;
     flex-direction:column; 
+    margin:auto;
+    align-content:space-between; 
 }
 
 body.darkMode footer .footerConetent{
@@ -87,7 +89,8 @@ body.darkMode footer .footerTitle {
     align-items:center; 
     border-top:1px solid rgba(220, 221, 223, 1);
     padding: 2rem 0;
-    gap: 6rem;
+    gap: 6rem; 
+    margin-top:0.5rem;
 }
 
 
@@ -210,9 +213,33 @@ body.darkMode .subscribeBtn {
         text-align:center;
     }
     
+    .footerLinks{
+        display:flex;
+        justify-content:space-between;
+        gap:1rem;
+        width:100%;
+        padding:1rem;
+    }
+    .footerLinks .linkItemsColumn{
+        display:flex;
+        flex-direction:column;
+        gap:0.5rem;
+    } 
     .footerBottom{
         flex-direction:column; 
-        padding: 1rem 0;
-        gap: 1rem;
+        padding: 0.5rem 0;
+        gap: 1rem; 
+        width:100%;
+    }
+
+    .footerBottom .bottomLeft{
+        display:flex;
+        gap:1rem;
+        width:100%;
+        justify-content: center;
+    }
+    .footerBottom .bottomRight{
+        width:100%;
+        justify-content: space-between;
     }
 }
