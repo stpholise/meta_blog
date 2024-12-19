@@ -7,11 +7,11 @@
  import Image_7 from '../assets/post_image/Rectangle_7.jpg'
  import Image_8 from '../assets/post_image/Rectangle_8.jpg'
  import Image_9 from '../assets/post_image/Rectangle_9.jpg'
- import User_1_image from '../assets/profile_image/Image_1.jpg'
- import User_2_image from '../assets/profile_image/image_2.jpg'
- import User_3_image from '../assets/profile_image/image_3.jpg'
+ import User_1_image from '../assets/profile_image/Image_1.jpg';
+ import User_2_image from '../assets/profile_image/Image_2.jpg'
+ import User_3_image from '../assets/profile_image/Image_3.jpg'
  import User_4_image from '../assets/profile_image/Image_4.jpg'
- import User_5_image from '../assets/profile_image/image_5.jpg'
+ import User_5_image from '../assets/profile_image/Image_5.jpg'
  
 
 
