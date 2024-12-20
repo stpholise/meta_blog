@@ -209,9 +209,8 @@ body.darkMode .subscribeBtn {
         width:100%; 
         padding:0;
     }
-    .footerAbout{
-        text-align:center;
-    }
+   
+    
     
     .footerLinks{
         display:flex;
@@ -240,6 +239,8 @@ body.darkMode .subscribeBtn {
     }
     .footerBottom .bottomRight{
         width:100%;
+        flex-direction:column;
         justify-content: space-between;
+        align-items:flex-start;
     }
 }

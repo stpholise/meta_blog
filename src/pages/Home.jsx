@@ -1,7 +1,7 @@
-import Header from '../components/Header'
+// import Header from '../components/Header'cd me
 import Advertisement from '../components/Advertisement'
 import LatestPosts from '../components/LatestPosts'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 import Hero_Image from '../assets/hero_Image.jpg'
 import '../styles/Home.css'
 import User_4_image from '../assets/profile_image/Image_4.jpg'
@@ -9,7 +9,7 @@ import User_4_image from '../assets/profile_image/Image_4.jpg'
 const Home = () => {
   return (
     <div> 
-        <Header />
+        {/* <Header /> */}
         <div className="content">
           <div className="hero">
             <div className="heroImgCont">
@@ -36,7 +36,7 @@ const Home = () => {
           </div>
           <Advertisement /> 
         </div>
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }
