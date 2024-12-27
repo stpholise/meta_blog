@@ -1,24 +1,30 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import '../styles/navigation.css'
 import Menu_1 from '/menu-01.svg'
 import CloseIcon from '/close-Icon.svg'
 // import LightCloseIcon from '/light-close-icon.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ModeToggle from './ModeToggel'
 import 'animate.css'
 
 
 const Navigation = () => {
     const [ showNav, setShowNav] = useState(false)
+    const location = useLocation()
     const pages = [
         {value: '/', label:'Home'},
-        {value: '/blog', label:'Blog'},
+        {value: '/blogs', label:'Blog'},
         {value: '/contact', label:'Contact'}
     ]
 
     const handleNav = () => {
         setShowNav(!showNav)
     }
+
+    useEffect(() => {
+        setShowNav(false)
+    }, [location])
+
   return (
     <>
         {
