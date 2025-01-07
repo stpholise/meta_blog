@@ -2,15 +2,19 @@ import {   useNavigate } from 'react-router-dom'
  
 import { PropTypes } from 'prop-types'
 
-const BlogCard = ( {post, index}) => {
+const BlogCard = ( {post, }) => {
     const navigate = useNavigate()
     const handleBlogDetail = (id) =>{
         navigate(`/blogs/${id}`);
       }
 
+    const handleUser = (username, name) => {
+        // console.log({'usernamer': username, 'name': name})
+        navigate(`/users/${username}`,  { state: { name } })
+    }
     
   return (
-    <div className="postContainer" key={index}>
+    <div className="postContainer"  >
         <div className="postTop"> 
             <img src={post.cover_image   } alt="" /> 
         </div>
@@ -19,7 +23,7 @@ const BlogCard = ( {post, index}) => {
                 <p className="postCategory">{post.type_of}</p>
                 <h3 className="postTitle">{post.title} </h3>
             </div>
-        <div   className="postUserInfo"> 
+        <div   className="postUserInfo" onClick={() => handleUser(post.user.username, post.user.name)}> 
             <div className="userImgWrapper">
                 <img src={post.user.profile_image}  className='userImage'  alt="" />
                 <p className="postUserName">{post.user.name}</p>
@@ -36,7 +40,7 @@ const BlogCard = ( {post, index}) => {
 
 BlogCard.propTypes = {
     post: PropTypes.object.isRequired,
-    index: PropTypes.number.isRequired
+    // key: PropTypes.number.isRequired
 }
 
 export default BlogCard

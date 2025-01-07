@@ -1,7 +1,6 @@
  
   
- import  useFetchBlogs  from '../../hooks/useFechBlogs' 
- 
+ import  useFetchBlogs  from '../../hooks/useFechBlogs'  
  import '../../styles/latestPosts.css'
  import '../../styles/blogs.css'
  import BlogCard from './BlogCard'
@@ -38,9 +37,7 @@
                 )
                     }
 
-                </div>
-         
-
+                </div> 
             <div className="viewButtons">
                 {
                     (!isLoading && pageNumber > 1) && <button className="allPostBtn"  onClick={handleVieLess}>  View Less  </button>

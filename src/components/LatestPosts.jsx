@@ -12,6 +12,7 @@
 //  import User_3_image from '../assets/profile_image/Image_3.jpg'
 //  import User_4_image from '../assets/profile_image/Image_4.jpg'
 //  import User_5_image from '../assets/profile_image/Image_5.jpg'
+import BlogCard from './blogs/BlogCard'
  
  
 import { Link,   } from 'react-router-dom';
@@ -43,26 +44,8 @@ import { Link,   } from 'react-router-dom';
         {
           blogs &&
           blogs.slice(0, 9).map((post, index) =>(
-            <div className="postContainer" key={index}>
-                <div className="postTop">
-                  
-                   <img src={post.cover_image } alt="" /> 
-                </div>
-                <div className="postBottom"> 
-                  <div className="postText">
-                    <p className="postCategory">{post.type_of}</p>
-                    <h3 className="postTitle">{post.title} </h3>
-                  </div>
-                  <div className="postUserInfo"> 
-                    <div className="userImgWrapper">
-                        <img src={post.user.profile_image}  className='userImage'  alt="" />
-                        <p className="postUserName">{post.user.name}</p>
-                    </div>
-                    <p className="postDate">{post.user.postedAt} </p>
-                  </div>
-
-                </div>
-            </div>
+                 <BlogCard post={post} key={index}     />
+           
           ) )
         }
 

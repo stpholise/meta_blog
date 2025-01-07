@@ -6,9 +6,12 @@ import {Route, Routes, } from 'react-router-dom'
 import Home from './pages/Home'
 import Blogs from './pages/Blogs'
 import BlogDetail from './pages/BlogDetail'
+import CreateBlog from './pages/CreateBlog'
+import User from './pages/User'
+import Contact from './pages/Contact'
 
 function App() {
- 
+
 
   return (
     <>
@@ -18,6 +21,9 @@ function App() {
           <Route path='/' exact element={<Home />} />
           <Route path='/blogs' exact element={<Blogs />} />
           <Route path='/blogs/:id' exact element={<BlogDetail />} /> 
+          <Route path='/users/:username' exact element={<User />} />
+          <Route path='/create_blog' exact element={<CreateBlog />} /> 
+          <Route path='/contact' exact element={<Contact />} />
         </Routes>
         <Footer />
     </div> 
