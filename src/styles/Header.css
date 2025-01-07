@@ -10,15 +10,7 @@
     gap:1rem;
     margin:auto;
 }
-
-
-.pageTopNav{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:1rem;
-}
-
+ 
 .headerRight{
     display:flex;
     justify-content:center;
@@ -59,10 +51,12 @@
     outline:none;
     position:relative;
     transition: background-color 0.25s;
+    border:2px solid var(--input-border);
 }
 
 .modeBtn.active{
     background-color:rgba(75, 107, 251, 1);
+    border:1px solid var(--input-border)
 }
 
 

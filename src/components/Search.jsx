@@ -9,8 +9,9 @@ const Search = () => {
           <input type="text" className="serchInput" />
           <img src={SearchIcon} className='searchIcon' alt="" />
       </div>
-      <ModeToggle />
-
+      <div className="bigScreen"> 
+          <ModeToggle /> 
+      </div>
     </div>
   )
 }

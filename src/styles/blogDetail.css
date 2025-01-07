@@ -1,0 +1,50 @@
+
+.blog-cover{
+    width: 100%;
+    max-width: 1200px;
+    margin: 1.4rem auto;
+    padding:1rem;
+}
+
+
+.articleTitle{
+    font-size:22px;
+    margin:auto;
+    max-width:1200px;
+    width:100%;
+    text-align:center;
+    padding:1rem;
+
+}
+
+.articleText{
+    margin:1rem auto;
+    width:100%;
+    max-width:1000px;
+    text-align:left;
+    padding: 1.5rem;
+    line-height:1.6; 
+}
+
+.articleText p{
+    padding:0.5rem 0;
+}
+.articleText h6{
+    font-size:20px;
+}
+.articleText h1{
+    font-size:20px;
+    border:2px solid red;
+}
+
+.articleText a{
+    color:rgb(80, 80, 199);
+}
+.articleText ul{
+    list-style-position: inside;
+    margin:0.4rem 0;
+}
+
+.articleText ul li{
+    padding:0.6rem 0; 
+}
