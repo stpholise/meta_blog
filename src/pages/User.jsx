@@ -2,7 +2,7 @@
 import { useFetchUserProfile, useFetchUserArticles } from '../hooks/useFechBlogs'
 import { useParams } from 'react-router-dom' 
 import BlogCard from '../components/blogs/BlogCard'
-import UserHero from '../components/User/UserHero'
+import UserHero from '../components/user/userHero'
 // import { useLocation } from 'react-router-dom'
 
 
