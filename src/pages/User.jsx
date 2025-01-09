@@ -2,6 +2,7 @@
 import { useFetchUserProfile, useFetchUserArticles } from '../hooks/useFechBlogs'
 import { useParams } from 'react-router-dom' 
 import BlogCard from '../components/blogs/BlogCard'
+import UserHero from '../components/User/UserHero'
 // import { useLocation } from 'react-router-dom'
 
 
@@ -18,16 +19,8 @@ const User = () => {
   return (
     <div className='userPage'>
       {
-        !isLoading ? (
-          <div>
-            <img src={profile.profile_image} alt=""  />
-            <h1>{username}</h1> 
-            <p>{profile.name}</p>
-            <p> Joined : {profile.joined_at}</p>
-           { (profile.location) && <p>Location: {profile.location}</p>}
-           { (profile.twitter_username) && <p>Location: {profile.twitter_username}</p>}
-           { (profile.website_url) && <p>Location: {profile.website_url}</p>}
-          </div>
+        !isLoading ? ( 
+            <UserHero profile={profile} /> 
         ) : (
           <div>Loading...</div>
         )
@@ -35,14 +28,16 @@ const User = () => {
 
       {
         !isLoadingArticle ?
-        (
-          <div className='latestpostContainer'>
-            {
-            articles && (
-              
-              articles.map((post, index) => (
-                <BlogCard post={post} key={index} />
-            )))}
+        (    
+          <div className="content">
+            <div className='latestpostContainer'>
+              {
+              articles && (
+                
+                articles.map((post, index) => (
+                  <BlogCard post={post} key={index} />
+              )))}
+            </div>
           </div>
           
       )

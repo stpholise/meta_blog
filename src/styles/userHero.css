@@ -1,0 +1,52 @@
+
+
+.userHero{
+    width:100%;
+    max-width:1216px;
+    margin: 1rem auto;
+    display:flex;
+    flex-direction:column; 
+    gap:0.8rem;
+    border-radius: 0.8rem;
+    align-items:center;
+    text-align:center;
+    padding:1rem;
+    box-shadow: inset 0px -500px 500px -50px rgba(0, 0, 0, 0.3);
+}
+.userHero .summary{
+   width:100%;
+    max-width:900px;
+}
+
+.profile_image_cont{
+    width:70px;
+    border-radius: 50%;
+    overflow:hidden;
+    border:1px solid var(--light-bg);
+}
+.profile_image_cont img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+
+/* ============================ USER CARD ========================================================================================================== */
+/* ================================================================================================================================================= */
+/* ================================================================================================================================================= */
+/* ================================================================================================================================================= */
+/* ================================================================================================================================================= */
+.userCard{
+    width:100%;
+    max-width:900px; 
+    display:flex; 
+    align-items:center;
+    justify-content: center;
+    margin:0.5rem auto; 
+    gap:1rem;
+    padding:1rem;  
+}
+
+.userCard .text{
+    text-align:left;
+}
