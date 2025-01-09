@@ -174,8 +174,8 @@ export const useFetchUserArticles = ({username}) => {
                       }
                 }
                 const data = await response.json()
-                console.log('data', data.length)
-                console.log(data)
+                // console.log('data', data.length)
+                // console.log(data)
                 setArticle(data)
                 setIsLoading(false)                
             }

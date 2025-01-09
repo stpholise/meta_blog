@@ -8,9 +8,8 @@ const BlogCard = ( {post, }) => {
         navigate(`/blogs/${id}`);
       }
 
-    const handleUser = (username, name) => {
-        // console.log({'usernamer': username, 'name': name})
-        navigate(`/users/${username}`,  { state: { name } })
+    const handleUser = (username ) => { 
+        navigate(`/users/${username}` )
     }
     
   return (
@@ -23,7 +22,7 @@ const BlogCard = ( {post, }) => {
                 <p className="postCategory">{post.type_of}</p>
                 <h3 className="postTitle">{post.title} </h3>
             </div>
-        <div   className="postUserInfo" onClick={() => handleUser(post.user.username, post.user.name)}> 
+        <div   className="postUserInfo" onClick={() => handleUser(post.user.username)}> 
             <div className="userImgWrapper">
                 <img src={post.user.profile_image}  className='userImage'  alt="" />
                 <p className="postUserName">{post.user.name}</p>
