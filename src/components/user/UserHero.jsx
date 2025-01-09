@@ -1,7 +1,6 @@
-
 import { PropTypes } from 'prop-types'
 import '../../styles/userHero.css'
-import UserCard from './userCard'
+import UserCard from './UserCard'
 
 
  const userHero = ({profile}) => {
