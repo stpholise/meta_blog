@@ -15,7 +15,7 @@
 import BlogCard from './blogs/BlogCard'
  
  
-import { Link,   } from 'react-router-dom';
+  import { Link,   } from 'react-router-dom';
  import { PropTypes } from 'prop-types'
  import useFetchLatestBlogs from '../hooks/useFetchLatestBlogs' 
  
@@ -43,7 +43,7 @@ import { Link,   } from 'react-router-dom';
      <div className='latestpostContainer'>
         {
           blogs &&
-          blogs.slice(0, 9).map((post, index) =>(
+          blogs.filter((blog, index) => index !== blogs.findIndex(blog => blog.cover_image !== null)) .slice(0, 9).map((post, index) =>(
                  <BlogCard post={post} key={index}     />
            
           ) )

@@ -9,6 +9,7 @@
  
  const FetchBlogs = (  ) => {
   const [ pageNumber, setPageNumber ] = useState(1)
+  const [ blog, setBlog ] = useState(null)
 
   const {blogs, isLoading, error} = useFetchBlogs( {pageNumber})  
 
@@ -27,25 +28,36 @@
     }
   }
 
+  useEffect(() => {
+    setBlog(blogs.find(blog => blog.cover_image !== null) || null);  // set the first blog with a cover image
+  }, [blogs]);
+ 
+ 
    return (
         <> 
               { isLoading  ? <p>Loading .....</p>
                 :
                 error ?
                 <p>Error: {error.message}</p>
-                :   blogs ?
+                :   blogs ?(
+                blog ?
                 <div> 
-                  <BlogsHero blog={blogs[0]} />
+                  <BlogsHero blog={blog} />
                 </div>
                 : (
                   <p>No blog found</p>  // In case blog is null or undefined
+              )): (
+                <p>No blogs available</p> // In case blogs is null or empty
               )
               }
          
                 <div className='latestpostContainer'>
                     {
                     blogs &&
-                    blogs.slice(1, 30).map((post, index) =>(
+                    blogs
+                    .filter((blog, index) => index !== blogs.findIndex(blog => blog.cover_image !== null)) // Remove the first blog with a cover image
+                    .slice(0,30)
+                    .map((post, index) =>(
                         <BlogCard post={post} key={index}     />
                     ) 
                 )
@@ -54,9 +66,9 @@
                 </div> 
             <div className="viewButtons">
                 {
-                    (!isLoading && pageNumber > 1) && <button className="allPostBtn"  onClick={handleVieLess}>  View Less  </button>
+                    (!isLoading && pageNumber > 1) && <button className="allPostBtn"  onClick={handleVieLess}  disabled={isLoading}>  View Less  </button>
                 }
-                <button className="allPostBtn"  onClick={handleViewMore}>  View More  </button>
+                <button className="allPostBtn"  onClick={handleViewMore}  disabled={isLoading}>  View More  </button>
             
         
             </div>
