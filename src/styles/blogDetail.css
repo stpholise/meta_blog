@@ -17,6 +17,7 @@
 
 }
 
+
 .articleText{
     margin:1rem auto;
     width:100%;
@@ -47,4 +48,26 @@
 
 .articleText ul li{
     padding:0.6rem 0; 
+}
+
+.blogDetail .heroCard{
+    position:relative;
+    width:100%;
+    max-width:1200px;
+    border:none;
+    box-shadow: none ;
+    margin:0 auto;
+    left:0;
+    gap:1rem;
+    padding:1rem;
+}
+
+body.darkMode .blogDetail .heroCard {
+    border:none;
+    background: rgba(24, 26, 42, 1);
+}
+body.darkMode .blogDetail .heroCard h1 {
+   width: 100%;
+   max-width:900px;
+   font-size:37px;
 }

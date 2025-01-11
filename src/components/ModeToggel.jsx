@@ -1,20 +1,27 @@
 import { useState,useEffect } from 'react'
-import Ball from '../assets/icons/Vector.svg'
+import Ball from '../assets/icons/Vector.svg' 
+import { useDispatch,    } from 'react-redux'
+import { toggleDarkMode } from '../store/AppSlice'
 
 const ModeToggel = () => {
     const [darkMode, setDarkMode] = useState(false)
+    const dispatch = useDispatch()
 
+    // const darkModeState = useSelector(state => state.app.darkMode)
+    
     const handleDarkMode = (darkMode) => {
         setDarkMode(!darkMode)
-     
+        dispatch(toggleDarkMode(darkMode))
+      
     }
 
 useEffect(()=> {
     if(darkMode) {
         document.body.classList.add('darkMode')
-        console.log(document.body)
+      
     }else(
         document.body.classList.remove('darkMode')
+       
     )
 }, [darkMode])
 

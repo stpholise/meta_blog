@@ -3,19 +3,18 @@
  import { useFetchSingleBlog } from '../hooks/useFechBlogs'
 import { useFetchComments } from '../hooks/useFechBlogs' 
 import '../styles/blogDetail.css' 
-
+import HeroCard from '../components/user/HeroCard'
  
 import DOMPurify from 'dompurify';
 
 
 const BlogDetail = () => { 
-    const  { id } = useParams()
-    console.log(id)
+    const  { id } = useParams() 
     const { blog, isLoading, error } = useFetchSingleBlog({id})
     
     const {comments} = useFetchComments({id})
     const sanitizedHtml = blog ? DOMPurify.sanitize(blog.body_html) : '';
- console.log('comments', comments.body)
+ 
   
   return (
     <div className="">
@@ -24,22 +23,16 @@ const BlogDetail = () => {
         error ?
         <p>Error: {error.message}</p>
         :   blog ?
-        <div>
-            <div className="blog-cover">
-                            <img src={blog.cover_image} className='coverImage' alt="" /> 
-                            <div className="coverText">
-                                <h3>{blog.type_of}</h3>
-                                <p>{blog.user.name}</p>
+        <div className="blogDetail">
+                <HeroCard blog={blog} />
+                            <div className="blog-cover">               
+                                <img src={blog.cover_image} className='coverImage' alt="" /> 
+                            <div className="coverText"> 
                                 <p>{blog.tag_list}</p>
                            </div> 
             </div>
             <h1 className='articleTitle' >{blog.title}</h1>
-            <div className='articleText' dangerouslySetInnerHTML={{ __html: sanitizedHtml   }}  />
-            {/* <div className='articleText' dangerouslySetInnerHTML={{ __html: blog.body_html   }}  /> */}
-           
-
-
-
+            <div className='articleText' dangerouslySetInnerHTML={{ __html: sanitizedHtml   }}  /> 
             {
               comments.length >= 1 && 
               <div>

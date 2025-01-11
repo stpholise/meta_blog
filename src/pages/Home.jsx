@@ -1,42 +1,21 @@
-// import Header from '../components/Header'cd me
+ 
 import Advertisement from '../components/Advertisement'
-import LatestPosts from '../components/LatestPosts'
-// import Footer from '../components/Footer'
-import Hero_Image from '../assets/hero_Image.jpg'
-import '../styles/Home.css'
-import User_4_image from '../assets/profile_image/Image_4.jpg'
+import LatestPosts from '../components/LatestPosts' 
+import '../styles/Home.css' 
+import Hero from '../components/user/Hero'
 
 const Home = () => {
   return (
-    <div> 
-        {/* <Header /> */}
+    <div>  
         <div className="content">
-          <div className="hero">
-            <div className="heroImgCont">
-                <img src={Hero_Image} className='heroImage' alt="" /> 
-            </div>
-            <div className="heroCard">
-                <div className="heroCardText">
-                  <h5 className="heroCardCategory">Technology</h5>
-                  <h1>The Impact of Technology on the Workplace: How Technology is Changing</h1>
-                </div>
-                <div className="postUserInfo">
-                  <div className="userImgWrapper">
-                      <img src={User_4_image} className='userImage' alt="user profile " />
-                      <p className="postUserName">Jason Francisco</p>
-                  </div>
-                  <p className="postDate">August 20, 2022 </p>
-                </div>
-            </div>
-          </div>
+          <Hero /> 
           <Advertisement />
           <div className="latestPostWrapper">
             <h2> Latest Post</h2>
             <LatestPosts />
           </div>
           <Advertisement /> 
-        </div>
-        {/* <Footer /> */}
+        </div> 
     </div>
   )
 }

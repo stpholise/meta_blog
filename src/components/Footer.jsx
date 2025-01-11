@@ -2,15 +2,17 @@
  import NewsLetter from './NewsLetter'
 import  '../styles/footer.css'  
 import MetaBlog from '../assets/icons/MetaBlog.svg'
+import LightMetaBlog from '../assets/icons/Light_MetaBlog.svg'
 import Logo_ from '../assets/icons/Logo_.svg'
+import LogoLight from '../assets/icons/Logo_Light.svg'
+import { useSelector } from 'react-redux'
+
 
  const quickLink = [
   { value:'/',  label: 'Home'},
-  { value:'about', label: 'About'},
-  { value:'blog', label: 'Blog'},
-  { value:'archived', label:'Archived'},
-  { value:'author', label:'Author'},
-  { value:'contact', label:'Contact'},
+  {   label: 'About'},
+  { value:'/blogs', label: 'Blogs'}, 
+  { value: '/contact', label:'Contact'},
  ]
  const categories = [
    {value: 'lifestyle', label: 'Lifestyle'},
@@ -28,6 +30,9 @@ import Logo_ from '../assets/icons/Logo_.svg'
  ]
  
  const Footer = () => {
+
+  const darkModeState = useSelector(state => state.app.darkMode)
+
    return (
       <footer>
         <div className="footerContent">
@@ -80,16 +85,25 @@ import Logo_ from '../assets/icons/Logo_.svg'
                   }
                   </div>
               </div>
-            </div>
-            
-            <NewsLetter />
-
+            </div> 
+            <NewsLetter /> 
           </div>
           <div className="footerBottom">
             <div className="bottomLeft">
-                  <img src={Logo_} alt="" className="footerLogo" />
+                  {
+                    darkModeState ? 
+                      <img src={Logo_} alt="" className="footerLogo" />
+                      :  
+                      <img src={LogoLight} alt="" className="footerLogo" />
+                  }
+
                   <div className="flexCenter">
-                    <img src={MetaBlog} alt="" className="metaBlog" /> 
+                    {
+                      darkModeState ? 
+                      <img src={MetaBlog} alt="" className="metaBlog" /> 
+                      :
+                      <img src={LightMetaBlog} alt="" className="metaBlog" /> 
+                    }
                     <p className="smallP">© JS Template 2023. All Rights Reserved.</p>
                   </div>
             </div>
