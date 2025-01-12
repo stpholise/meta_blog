@@ -71,3 +71,53 @@ body.darkMode .blogDetail .heroCard h1 {
    max-width:900px;
    font-size:37px;
 }
+
+
+@media(max-width:768px){
+    .articleTitle{
+        font-size:20px;
+    }
+    .articleText{
+        padding:1rem;
+        text-align:left;
+        width:100%;
+        overflow-x:auto
+    }
+
+
+    .articleText h6{
+        font-size:18px;
+    }
+    .articleText h1{
+        font-size:18px;
+    }
+    .articleText p{
+        font-size:16px;
+    }
+    .articleText ul li{
+        font-size:16px;
+    }
+    .articleText ul{
+        font-size:16px;
+    }
+    .blog-cover{
+        padding:0.5rem;
+    }
+    .blogDetail .heroCard{
+        padding:0.5rem; 
+        transform: none;
+        top:0;
+        gap:0.7rem;
+    } 
+    
+    body.darkMode .blogDetail .heroCard h1 { 
+        font-size: 28px;
+    }
+
+    .blog-cover {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0.4rem auto;
+        padding: 1rem; 
+    }
+}

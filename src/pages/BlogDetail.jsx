@@ -25,12 +25,14 @@ const BlogDetail = () => {
         :   blog ?
         <div className="blogDetail">
                 <HeroCard blog={blog} />
-                            <div className="blog-cover">               
+                {  blog.cover_image !== null ?     <div className="blog-cover">               
                                 <img src={blog.cover_image} className='coverImage' alt="" /> 
                             <div className="coverText"> 
                                 <p>{blog.tag_list}</p>
                            </div> 
-            </div>
+                    </div>: null
+            }
+                     
             <h1 className='articleTitle' >{blog.title}</h1>
             <div className='articleText' dangerouslySetInnerHTML={{ __html: sanitizedHtml   }}  /> 
             {
