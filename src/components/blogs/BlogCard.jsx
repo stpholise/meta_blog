@@ -25,14 +25,14 @@ const BlogCard = ( {post, }) => {
         <div   className="postUserInfo" onClick={() => handleUser(post.user.username)}> 
             <div className="userImgWrapper">
                 <img src={post.user.profile_image}  className='userImage'  alt="" />
-                <p className="postUserName">{post.user.name}</p>
+               
             </div> 
-            <p className="postCategory">{post.readable_publish_date}</p>
+            <div className="nameDate">
+                <p className="postUserName">{post.user.name}</p>
+                <p className="postCategory">{post.readable_publish_date}</p>
+            </div>
         </div>
-        </div>
-        {/* <div className="commentContainer">
-            <p className="commentCount">{comments.length} Comments</p>
-        </div> */}
+        </div> 
     </div>
   )
 }

@@ -11,11 +11,7 @@
     box-shadow: inset 0px -500px 500px -50px rgba(0, 0, 0, 0.3);
     border-radius:0.8rem;
 }
-
-/* .blogsHero *{
-    border:1px solid red;
-} */
-
+ 
 .blogsHero .hero{
     overflow-x:hidden;
     position:relative;
@@ -46,9 +42,7 @@
 .blogsHero .heroCardText{
     color: rgba(232, 232, 234, 1)
 }
-/* .blogsHero .heroCardCategory{
-    
-} */
+ 
 .blogsHero .postUserInfo{
     color: rgba(232, 232, 234, 1)
 }
@@ -60,15 +54,42 @@ body.darkMode .blogsHero .heroCard{
     background: rgba(24, 26, 42,  0.2); 
 }
 
-/* .blogsHero .userImgWrapper{
-    
+ 
+@media(max-width:768px){
+    .blogsHero{
+        width:100%;
+        max-width:1216px;
+        margin: 0.5rem auto;  
+        display:flex;
+        flex-direction: column ;
+        padding:0;
+        height:auto;
+        min-height:300px; 
+        box-shadow: inset 0px -500px 500px -50px rgba(0, 0, 0, 0.3);
+        border-radius:0.8rem; 
+    }
+    .blogsHero .hero {
+        display:flex;
+        flex-direction:column-reverse; 
+    }
+    .blogsHero .heroCard {
+        position: relative;
+        z-index: 20;
+        bottom: 0;
+        left: 0;
+        top:0;
+        transform: none;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        border: none;  
+        margin-bottom:0.3rem ;
+        border-radius:0.7rem;
+        
+    }
+    .blogsHero .heroImgCont img{
+      border-radius: 0;
+    }
 }
-.blogsHero .userImage{
-    
-}
-.blogsHero .postUserName{
-    
-}
-.blogsHero .postDate{
-    
-} */
